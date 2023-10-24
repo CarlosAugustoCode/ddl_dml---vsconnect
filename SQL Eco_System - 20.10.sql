@@ -1,0 +1,46 @@
+CREATE DATABASE db_eco_system;
+USE db_eco_system;
+
+CREATE TABLE tb_usuario (
+id BINARY(16) NOT NULL,
+nome VARCHAR(255) NOT NULL,
+email VARCHAR(255) NOT NULL UNIQUE,
+genero VARCHAR(255) NOT NULL,
+cpf VARCHAR(14) NOT NULL UNIQUE,
+cnpj VARCHAR(18) NOT NULL UNIQUE,
+senha VARCHAR(255) NOT NULL,
+telefone VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE tb_endereco (
+logradouro VARCHAR(255) NOT NULL,
+numero VARCHAR(255) NOT NULL,
+bairro VARCHAR(255) NOT NULL,
+cidade VARCHAR(255) NOT NULL,
+estado VARCHAR(255) NOT NULL,
+cep VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE tb_tipo_usuario (
+tipo_usuario TINYINT NOT NULL
+);
+
+CREATE TABLE tb_coleta (
+horario VARCHAR(255) NOT NULL,
+_status VARCHAR(255)
+);
+
+CREATE TABLE tb_anuncio(
+id BINARY(16) NOT NULL,
+observacao VARCHAR(255)
+);
+
+CREATE TABLE tb_produto(
+nome VARCHAR(255),
+quantidade VARCHAR(255)
+);
+
+CREATE TABLE tb_(
+nome VARCHAR(255)
+);
+
